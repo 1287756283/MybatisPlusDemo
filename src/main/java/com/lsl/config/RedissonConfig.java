@@ -51,17 +51,17 @@ public class RedissonConfig {
 
 
 
-    private String address = "redis://192.168.126.128:6379";
-    private int database = 4;
+//    private String address = "redis://192.168.126.128:6379";
+//    private int database = 4;
 
 
 
-    @Bean
-    RedissonClient redisson() throws Exception {
-        Config config = new Config();
-        config.useSingleServer().setAddress(address)
-                .setDatabase(database);
-        return Redisson.create(config);
-    }
+//    @Bean
+//    RedissonClient redisson() throws Exception {
+//        Config config = new Config();
+//        config.useSingleServer().setAddress(address)
+//                .setDatabase(database);
+//        return Redisson.create(config);
+//    }
 
 }

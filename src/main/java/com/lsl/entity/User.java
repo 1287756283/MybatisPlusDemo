@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -30,6 +31,7 @@ public class User implements Serializable {
 
     private String name;
 
+    @NotBlank(message="email格式错误") //是不不为空的情况
     private String email;
 
     private Integer age;

@@ -63,7 +63,7 @@ public class UserController {
         User user = new User();
         user.setId(1);
         user.setName("连石磊11");
-        user.setEmail("sss@qq.com");
+        user.setEmail(null);
         user.setAge(199);
         int i = userService.updateUser(user);
         return true;

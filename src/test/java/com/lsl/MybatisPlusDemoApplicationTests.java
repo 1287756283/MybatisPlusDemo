@@ -2,7 +2,10 @@ package com.lsl;
 
 import cn.hutool.core.util.StrUtil;
 import com.lsl.entity.SysDept;
+import com.lsl.entity.SystemDictData;
 import com.lsl.entity.User;
+import com.lsl.mapper.SystemDictDataMapper;
+import com.lsl.mapper.SystemDictTypeMapper;
 import com.lsl.service.IUserService;
 import com.lsl.service.SysDeptService;
 import org.junit.jupiter.api.Test;
@@ -13,6 +16,7 @@ import org.springframework.expression.ExpressionParser;
 import org.springframework.expression.spel.standard.SpelExpressionParser;
 import org.springframework.util.StringUtils;
 
+import java.io.IOException;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -23,7 +27,18 @@ class MybatisPlusDemoApplicationTests {
 
     @Autowired
     IUserService userService;
+    @Autowired
+    SystemDictDataMapper systemDictDataMapper;
+    @Autowired
+    SystemDictTypeMapper systemDictTypeMapper;
 
+
+    @Test
+    public void add() {
+        SystemDictData systemDictData = new SystemDictData();
+        systemDictData.setDictType("11");
+        systemDictDataMapper.insert(systemDictData);
+    }
 
     @Test
     void test() {

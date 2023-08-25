@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.lsl.Aop.annotation.Aliez;
 import com.lsl.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
+import org.springframework.validation.annotation.Validated;
 
 import java.util.List;
 
@@ -25,5 +26,5 @@ public interface IUserService extends IService<User>{
     String Byone();
 
 
-    int updateUser(User user);
+    int updateUser(@Validated User user);
 }
