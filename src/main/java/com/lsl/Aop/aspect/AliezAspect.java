@@ -1,6 +1,5 @@
 package com.lsl.Aop.aspect;
 
-import com.lsl.entity.User;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
@@ -18,7 +17,6 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Component
 public class AliezAspect {
-    static String name = User.class.getName();
 
     @Pointcut("@annotation(com.lsl.Aop.annotation.Aliez)")
     public void fkjgPointCut() {

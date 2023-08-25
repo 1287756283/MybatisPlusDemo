@@ -5,13 +5,13 @@ spring:
   main:
     allow-circular-references: true
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.126.128:3306/MybatisPlusdemo?useUnicode=true&&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.37.128:3306/MybatisPlusdemo?useUnicode=true&&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=UTC
     username: root
-    password: root
+    password: 123456
 
   redis:
-    host: 192.168.126.128
+    host: 192.168.37.128
     port: 6379
 
 logging:
